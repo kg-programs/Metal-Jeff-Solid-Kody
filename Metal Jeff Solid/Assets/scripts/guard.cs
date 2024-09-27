@@ -35,6 +35,7 @@ public class guard : MonoBehaviour
     float distanceToTarget = 0;
     bool sneaking;
     float startSpeed;
+    bool createReturnPath;
 
     // Start is called before the first frame update
     void Start()
@@ -168,6 +169,7 @@ public class guard : MonoBehaviour
             else
             {
                 speed = 0;
+                createReturnPath = true;
                 Invoke("resetState", 3);
             }
         }
@@ -239,8 +241,36 @@ public class guard : MonoBehaviour
     
     void resetState()
     {
-        pursuing = false;
-        pathCrated = false;
         speed = startSpeed;
+        if (createReturnPath)
+        {
+            if (agent.CalculatePath(points[current].position, navPath))
+            {
+                foreach (Vector3 p in navPath.corners)
+                {
+                    remainingPoints.Enqueue(p);
+                }
+                currentTargetPoint = remainingPoints.Dequeue();
+            }
+            createReturnPath = false;
+        }
+            var new_forward = (currentTargetPoint - transform.position).normalized;
+            new_forward.y = 0;
+            transform.forward = new_forward;
+
+            distToPoint = Vector3.Distance(transform.position, currentTargetPoint);
+
+            if (distToPoint < 1.1)
+            {
+                if (remainingPoints.Count > 0)
+                {
+                    currentTargetPoint = remainingPoints.Dequeue();
+                }
+                else
+                {
+                    pursuing = false;
+                    pathCrated = false;
+                }
+            }
     }
 }

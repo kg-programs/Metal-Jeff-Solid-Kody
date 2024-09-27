@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Player : MonoBehaviour
@@ -54,8 +55,22 @@ public class Player : MonoBehaviour
 
         return input.x * camRight + input.y * camForward;
     }
-    private void OnCollisonEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hit");
+        Debug.Log("trigger");
+        //Invoke("Reset",3);
+        if (other.tag == "enemy")
+        {
+            Reset();
+        }
+        if(other.tag == "door")
+        {
+            Debug.Log("winner");
+            Application.Quit();
+        }
+    }
+    public void Reset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
