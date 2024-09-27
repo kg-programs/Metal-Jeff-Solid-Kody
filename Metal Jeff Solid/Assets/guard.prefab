@@ -118,8 +118,8 @@ GameObject:
   - component: {fileID: 1995631777265412388}
   - component: {fileID: 5896986951864160082}
   - component: {fileID: 764268171033434724}
-  - component: {fileID: 5499788648584657636}
   - component: {fileID: 5844412844293759033}
+  - component: {fileID: 3544008909710240342}
   m_Layer: 6
   m_Name: guard
   m_TagString: enemy
@@ -239,36 +239,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5499788648584657636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3793241595641381219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd5fcf8f8e35b704fb5d9e376f36abf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 764268171033434724}
-  target: {fileID: 0}
-  player: {fileID: 0}
-  speed: 2
-  radius: 8
-  angle: 110
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 8
-  obstructionMask:
-    serializedVersion: 2
-    m_Bits: 128
-  points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  current: 0
 --- !u!54 &5844412844293759033
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -296,6 +266,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &3544008909710240342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3793241595641381219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfb010f9d7261440aabb4205a87679c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  target: {fileID: 0}
+  player: {fileID: 0}
+  speed: 0
+  radius: 0
+  angle: 0
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 0
+  points: []
+  current: 0
 --- !u!1 &8593582318948930664
 GameObject:
   m_ObjectHideFlags: 0

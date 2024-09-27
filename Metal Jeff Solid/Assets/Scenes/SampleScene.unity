@@ -2999,6 +2999,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 1497336089}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: angle
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1772772014}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: radius
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1772772018}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: points.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: targetMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: points.Array.data[0]
+      value: 
+      objectReference: {fileID: 328161628}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: points.Array.data[1]
+      value: 
+      objectReference: {fileID: 1862622931}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: points.Array.data[2]
+      value: 
+      objectReference: {fileID: 328161628}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: points.Array.data[3]
+      value: 
+      objectReference: {fileID: 87229216}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: obstructionMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3793241595641381219, guid: 91c64d9840975454ba292944a51f629f, type: 3}
       propertyPath: m_Name
       value: guard (1)
@@ -3040,6 +3092,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+--- !u!195 &1497336089 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 764268171033434724, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+  m_PrefabInstance: {fileID: 1497336088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1516075991
 GameObject:
   m_ObjectHideFlags: 0
@@ -3673,8 +3730,8 @@ GameObject:
   - component: {fileID: 1772772017}
   - component: {fileID: 1772772016}
   - component: {fileID: 1772772015}
-  - component: {fileID: 1772772021}
   - component: {fileID: 1772772020}
+  - component: {fileID: 1772772021}
   m_Layer: 3
   m_Name: player
   m_TagString: Player
@@ -3806,11 +3863,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1772772014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 269d110068ee3f94f93471c60e1af4c7, type: 3}
+  m_Script: {fileID: 11500000, guid: e61b2db90f4b8c447a4f5b86978b36a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1772772020}
   speed: 200
+  cam: {fileID: 963194227}
   sneak: 0
 --- !u!1 &1830169944
 GameObject:
@@ -4307,6 +4365,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 8122882335866600190}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: angle
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1772772014}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: radius
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1772772018}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: points.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: targetMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: points.Array.data[0]
+      value: 
+      objectReference: {fileID: 482819777}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: points.Array.data[1]
+      value: 
+      objectReference: {fileID: 2042064380}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: points.Array.data[2]
+      value: 
+      objectReference: {fileID: 1892827095}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: points.Array.data[3]
+      value: 
+      objectReference: {fileID: 1914076417}
+    - target: {fileID: 3544008909710240342, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+      propertyPath: obstructionMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3793241595641381219, guid: 91c64d9840975454ba292944a51f629f, type: 3}
       propertyPath: m_Name
       value: guard
@@ -4368,6 +4478,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+--- !u!195 &8122882335866600190 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 764268171033434724, guid: 91c64d9840975454ba292944a51f629f, type: 3}
+  m_PrefabInstance: {fileID: 8122882335866600189}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

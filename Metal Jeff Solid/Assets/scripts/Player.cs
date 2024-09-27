@@ -8,38 +8,38 @@ public class Player : MonoBehaviour
 
     [SerializeField] Rigidbody rb;
     [SerializeField] float speed;
+    [SerializeField] Camera cam;
     Vector2 input;
     public bool sneak = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    float horizontalInput;
+    float verticalInput;
 
     // Update is called once per frame
     void Update()
     {
-        input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
+        input = new Vector2(horizontalInput,verticalInput);
         if (Input.GetButton("Sneaking"))
         {
             if (sneak)
             {
                 sneak = false;
-                speed = speed * 2;
+                speed = 200;
             }
             else
             {
                 sneak = true;
-                speed = speed / 2;
+                speed = 50;
             }
         }
     }
     void FixedUpdate()
     {
-        var newInput = GetCameraBasedInput(input, Camera.main);
+        var newInput = GetCameraBasedInput(input, cam);
         var newVelocity = new Vector3(newInput.x*speed*Time.fixedDeltaTime, rb.velocity.y, newInput.z*speed*Time.fixedDeltaTime);
         rb.velocity = newVelocity;
+
     }
 
     Vector3 GetCameraBasedInput(Vector2 input, Camera cam)
@@ -54,9 +54,8 @@ public class Player : MonoBehaviour
 
         return input.x * camRight + input.y * camForward;
     }
-
-    public bool returnSneak()
+    private void OnCollisonEnter(Collision collision)
     {
-        return sneak;
+        Debug.Log("Hit");
     }
 }
